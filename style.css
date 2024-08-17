@@ -13,6 +13,11 @@ html {
 :root {
     --cor-fundo-secundaria: #8500ee;
     --cor-texto-secundario: #fff;
+    --cor-texto-titulo-produto: #5B067F;
+    --cor-texto-primario: #000;
+    --cor-fundo-produto: #FAFAFA;
+    --borda-produto: 1px solid #000;
+    --borda-lateral-produto: 15px;
 }
 
 body,
@@ -46,6 +51,7 @@ header {
 
 .header-container {
     height: 84px;
+    padding: 32px 0;
 }
 
 .header-container span {
@@ -69,4 +75,66 @@ nav {
 
 nav a+a {
     padding-left: 32px;
+}
+
+main {
+    padding: 54px 0;
+    height: calc(100vh - 84px - 84px);
+}
+
+.produto {
+    width: 360px;
+    height: 465px;
+    border-radius: var(--borda-lateral-produto);
+    padding: 15px;
+    border: var(--borda-produto);
+    background: var(--cor-fundo-produto);
+    float: left;
+}
+
+.produto+.produto {
+    margin-left: 51px;
+}
+
+.produto img {
+    margin-bottom: 15px;
+    height: 250px;
+    width: 180px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.produto h1 {
+    color: var(--cor-texto-titulo-produto);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 9px;
+    padding-left: 9x;
+    text-align: center;
+}
+
+.produto p {
+    color: var(--cor-texto-primario);
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 9px;
+    padding-left: 9x;
+    text-align: justify;
+}
+
+footer {
+    height: 84px;
+    padding: 33px 0;
+    background-color: var(--cor-fundo-secundaria);
+}
+
+footer p {
+    color: var(--cor-texto-secundario);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: initial;
+    text-align: center;
+
 }
